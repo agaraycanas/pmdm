@@ -54,6 +54,26 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void actualizar() {
-        this.banner.setText("ACTUALIZADO");
+        int calorias = 0;
+        calorias += ckBrocoli.isChecked() ? 100 : 0 ;
+        calorias += ckJamonYork.isChecked() ? 500 : 0 ;
+        calorias += ckHamburguesa.isChecked() ? 1500 : 0 ;
+        calorias += ckTorreznos.isChecked() ? 2000 : 0 ;
+
+        int min=0;
+        int max=0;
+
+        switch (menu.getCheckedRadioButtonId()) {
+            case R.id.rbLight:min=0;max=1000;break;
+            case R.id.rbNormal:min=1000;max=2000;break;
+            case R.id.rbGraso:min=2000;max=1000000;break;
+        }
+
+        String mensaje =  (calorias >= min && calorias < max ) ? "OK: " : "FATAL: ";
+        mensaje += " te estás enchufando %1$d calorías";
+        mensaje = String.format(mensaje,calorias);
+
+        this.banner.setText(mensaje);
+
     }
 }

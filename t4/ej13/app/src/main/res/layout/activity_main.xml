@@ -8,93 +8,130 @@
 
     <RadioGroup
         android:id="@+id/radioGroup"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.17"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintBottom_toTopOf="@+id/ghMedio"
+        app:layout_constraintEnd_toStartOf="@+id/gvDer"
+        app:layout_constraintStart_toStartOf="@+id/gvIzq"
+        app:layout_constraintTop_toTopOf="@+id/ghArriba">
 
         <RadioButton
             android:id="@+id/rbLight"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Light (<1000 cal)"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="Light (&lt;1000 cal)"
             android:textSize="20sp" />
 
         <RadioButton
             android:id="@+id/rbNormal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Normal (1000-2000 cal)"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="Normal (1000 2000 cal)"
             android:textSize="20sp" />
 
         <RadioButton
             android:id="@+id/rbGraso"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Graso (>2000 cal)"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="Graso (&gt;2000 cal)"
             android:textSize="20sp" />
     </RadioGroup>
 
     <CheckBox
         android:id="@+id/ckBrocoli"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
         android:text="Brócoli (100 cal)"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.11"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+        app:layout_constraintBottom_toTopOf="@+id/ckJamonYork"
+        app:layout_constraintEnd_toStartOf="@+id/gvDer"
+        app:layout_constraintStart_toStartOf="@+id/gvIzq"
+        app:layout_constraintTop_toTopOf="@+id/ghMedio" />
 
     <CheckBox
         android:id="@+id/ckJamonYork"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:text="Jamón York (500 cal)"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.14"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/ckHamburguesa"
+        app:layout_constraintEnd_toStartOf="@+id/gvDer"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/gvIzq"
         app:layout_constraintTop_toBottomOf="@+id/ckBrocoli" />
 
     <CheckBox
         android:id="@+id/ckHamburguesa"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Hamburguesa (1000 cal)"
+        android:text="Hamburguesa (1500 cal)"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.17"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/ckTorreznos"
+        app:layout_constraintEnd_toStartOf="@+id/gvDer"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/gvIzq"
         app:layout_constraintTop_toBottomOf="@+id/ckJamonYork" />
 
     <CheckBox
         android:id="@+id/ckTorreznos"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:text="Torreznos (2000 cal)"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.14"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/ghAbajo"
+        app:layout_constraintEnd_toStartOf="@+id/gvDer"
+        app:layout_constraintStart_toStartOf="@+id/gvIzq"
         app:layout_constraintTop_toBottomOf="@+id/ckHamburguesa" />
 
     <TextView
         android:id="@+id/banner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="22dp"
         android:text="MENSAJES"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.18"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ckTorreznos" />
+        app:layout_constraintEnd_toStartOf="@+id/gvDer"
+        app:layout_constraintStart_toStartOf="@+id/gvIzq"
+        app:layout_constraintTop_toTopOf="@+id/ghAbajo" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gvIzq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.085158154" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gvDer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.91727495" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/ghArriba"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.023255814" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/ghMedio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.42818058" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/ghAbajo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8112175" />
 </androidx.constraintlayout.widget.ConstraintLayout>
