@@ -2,11 +2,13 @@ package org.agaray.pmdm.t4.ej13;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.widget.CheckBox;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -74,6 +76,19 @@ public class MainActivity extends AppCompatActivity {
         mensaje = String.format(mensaje,calorias);
 
         this.banner.setText(mensaje);
+        tostada(mensaje);
+
+    }
+
+    private void tostada(String mensaje) {
+        Context contexto = getApplicationContext();
+        int duracion = Toast.LENGTH_SHORT; // Toast.LENGTH_LONG
+        Toast toast = Toast.makeText(	contexto,
+                mensaje,
+                duracion);
+        toast.show();
+
+        //Toast.makeText(	getApplicationContext(), mensaje,Toast.LENGTH_SHORT).show();
 
     }
 }
