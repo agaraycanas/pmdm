@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.agaray.pmdm.t5.ej01.domain.Persona;
+
 public class SecondaryActivity extends AppCompatActivity {
 
     @Override
@@ -13,13 +15,9 @@ public class SecondaryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_secondary);
 
-        String nombre = getIntent().getStringExtra("extraNombre");
+        Persona persona = (Persona)(getIntent().getSerializableExtra("persona"));
+
         TextView tv = (TextView)findViewById(R.id.banner);
-        tv.setText("HOLA "+nombre);
-
-        //int edad = getIntent().getIntExtra("edad");
-        int edad = 18;
-
-        Toast.makeText(this, "HOLA "+nombre+" tu edad dentro de dos años es "+(edad+2), Toast.LENGTH_SHORT).show();
+        tv.setText("HOLA "+persona);
     }
 }

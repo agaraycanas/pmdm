@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
+import org.agaray.pmdm.t5.ej01.domain.Persona;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -15,14 +17,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-
     public void abrirVentana(View view) {
         Intent i = new Intent(this, SecondaryActivity.class);
         EditText et = (EditText) findViewById(R.id.nombre);
+
         String nombre = !et.getText().toString().equals("") ? et.getText().toString() : "JOHN DOE";
-        i.putExtra("extraNombre",nombre);
-        int dato = 18;
-        i.putExtra("edad",dato);
+        int edad = (int)((Math.random()*50)+1);
+
+        Persona persona = new Persona(nombre,edad);
+        i.putExtra("persona",persona);
         startActivity(i);
     }
+
 }
