@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Díme tu estado de ánimo"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/rgEstados"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <RadioButton
+            android:id="@+id/rbIndiferente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="Indiferente"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/rbContento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Contento"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/rbTriste"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Triste"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/rbHambriento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hambriento"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/rbAburrido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Aburrido"
+            android:textSize="24sp" />
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
